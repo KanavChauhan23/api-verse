@@ -6,22 +6,27 @@ function App() {
   const [apis, setApis] = useState([])
   const [search, setSearch] = useState("")
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
-    fetch("https://api.publicapis.org/entries")
+    fetch("https://api.publicapis.dev/entries")
       .then(res => res.json())
       .then(data => {
-        setApis(data.entries)
+        if (data.entries) {
+          setApis(data.entries)
+        } else {
+          setError(true)
+        }
         setLoading(false)
       })
-      .catch(err => {
-        console.error(err)
+      .catch(() => {
+        setError(true)
         setLoading(false)
       })
   }, [])
 
   const filteredApis = apis.filter(api =>
-    api.API.toLowerCase().includes(search.toLowerCase())
+    api.API?.toLowerCase().includes(search.toLowerCase())
   )
 
   return (
@@ -36,9 +41,17 @@ function App() {
           onChange={(e) => setSearch(e.target.value)}
         />
 
-        {loading ? (
+        {loading && (
           <p className="mt-6 text-gray-400">Loading APIs...</p>
-        ) : (
+        )}
+
+        {error && (
+          <p className="mt-6 text-red-500">
+            Failed to load APIs. Try refreshing.
+          </p>
+        )}
+
+        {!loading && !error && (
           <div className="grid md:grid-cols-3 gap-6 mt-6">
             {filteredApis.slice(0, 60).map((api, index) => (
               <ApiCard
