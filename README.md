@@ -2,265 +2,176 @@
 
 <div align="center">
 
-![React](https://img.shields.io/badge/React-18+-blue?style=for-the-badge\&logo=react)
-![Vite](https://img.shields.io/badge/Vite-Fast%20Build-purple?style=for-the-badge\&logo=vite)
-![Tailwind](https://img.shields.io/badge/TailwindCSS-Modern%20UI-06B6D4?style=for-the-badge\&logo=tailwindcss)
+![React](https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-Fast%20Build-purple?style=for-the-badge&logo=vite)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-Modern%20UI-06B6D4?style=for-the-badge&logo=tailwindcss)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-Animations-pink?style=for-the-badge&logo=framer)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**A Modern Platform to Discover Free APIs for Developers**
+**A Modern Platform to Discover Free Public APIs for Developers**
 
 [Live Website](https://apisverse.vercel.app/) • [Report Bug](https://github.com/KanavChauhan23/API-Verse/issues) • [Request Feature](https://github.com/KanavChauhan23/API-Verse/issues)
-
-*Discover powerful APIs faster and build better applications*
 
 </div>
 
 ---
 
-# 🌟 Overview
+## 🌟 Overview
 
-**API Verse** is a modern developer platform that helps programmers discover useful APIs for building applications.
-
-The platform provides a **clean interface where developers can explore APIs by category, read descriptions, and directly access documentation links**.
-
-It is built with modern frontend technologies to ensure **fast performance, smooth animations, and a responsive developer-friendly UI.**
-
-### Why API Verse?
-
-* 🚀 **Developer Friendly** – Easily discover useful APIs
-* 🎨 **Modern UI/UX** – Clean interface with responsive design
-* ⚡ **Fast Performance** – Powered by Vite and React
-* 📚 **Organized Categories** – APIs grouped by use cases
-* 🔗 **Direct Documentation Access** – Quick links to API docs
-* 🆓 **Free to Use** – No login required
+**API Verse** is a clean, fast developer platform for discovering free public APIs. Built with React + Vite, it lets developers browse APIs by category, check auth/HTTPS/CORS details at a glance, and jump straight to the official docs — all without any login or signup.
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-## 📦 API Discovery
-
-* Browse a curated collection of useful APIs
-* Organized categories for easy navigation
-* Quick API overview with descriptions
-
-## 🔍 Search & Explore
-
-* Quickly find APIs using the search feature
-* Filter APIs based on categories
-* Easy browsing experience
-
-## 🎨 Modern UI
-
-* Smooth animations with **Framer Motion**
-* Card-based layout for API listing
-* Responsive design for all screen sizes
-
-## ⚡ High Performance
-
-* Built using **React + Vite**
-* Fast page loading
-* Optimized UI rendering
-
-## 📱 Responsive Design
-
-* Works smoothly on:
-
-  * Desktop
-  * Tablets
-  * Mobile devices
-
-
-# 🚀 Live Website
-
-Try the platform here:👉 [APIVerse](https://apisverse.vercel.app/)
-
-
-# 🛠 Tech Stack
-
-### Frontend
-
-* **React.js** – Component-based UI framework
-* **Vite** – Lightning-fast build tool
-* **TailwindCSS** – Modern utility-first styling
-* **Framer Motion** – Smooth UI animations
-
-### Development Tools
-
-* JavaScript (ES6+)
-* Git & GitHub
-* Vercel Deployment
+- 🔍 **Live Search** — Filter APIs in real-time by name as you type
+- 🃏 **Card Layout** — Each API shows its category, auth type, HTTPS, and CORS support
+- 🎞️ **Smooth Animations** — Hover effects powered by Framer Motion
+- 📱 **Fully Responsive** — Works on desktop, tablet, and mobile
+- 🔗 **Direct Docs Links** — One-click access to official API documentation
+- ⚡ **Fast Load** — Vite-powered build with near-instant HMR in dev
 
 ---
 
-# 💻 Installation & Setup
+## 🛠 Tech Stack
+
+| Layer      | Technology               |
+|------------|--------------------------|
+| UI         | React 18                 |
+| Build Tool | Vite 5                   |
+| Styling    | Tailwind CSS 3           |
+| Animation  | Framer Motion 11         |
+| Language   | JavaScript (ES6+)        |
+| Deployment | Vercel                   |
+
+---
+
+## 📁 Project Structure
+
+```
+api-verse/
+│
+├── index.html
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
+│
+└── src/
+    ├── main.jsx           # App entry point
+    ├── App.jsx            # Root component — search logic & layout
+    ├── index.css          # Global Tailwind styles
+    │
+    ├── components/
+    │   ├── Navbar.jsx     # Top navigation bar
+    │   └── ApiCard.jsx    # Individual API card with motion animation
+    │
+    └── data/
+        └── apis.js        # Static list of API entries
+```
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-* Node.js (v18 or higher)
-* npm or yarn
+- Node.js v18 or higher
+- npm
 
----
-
-### 1️⃣ Clone the Repository
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/KanavChauhan23/API-Verse.git
 cd API-Verse
 ```
 
-
-### 2️⃣ Install Dependencies
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3️⃣ Run Development Server
+### 3. Start the dev server
 
 ```bash
 npm run dev
 ```
 
-### 4️⃣ Open in Browser
+### 4. Open in your browser
 
 ```
 http://localhost:5173
 ```
 
----
+### Build for production
 
-# 📁 Project Structure
-
-```
-API-Verse
-│
-├── public
-│
-├── src
-│   │
-│   ├── components
-│   │   ├── ApiCard.jsx
-│   │   └── Navbar.jsx
-│   │
-│   ├── data
-│   │   └── apis.js
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
-├── package.json
-├── vite.config.js
-└── README.md
+```bash
+npm run build
 ```
 
 ---
 
-# 🎯 Use Cases
+## ➕ Adding a New API
 
-### 👨‍💻 Developers
+Open `src/data/apis.js` and add a new entry to the array:
 
-* Discover APIs for projects
-* Save development time
-* Explore new API tools
+```js
+{
+  name: "Your API Name",
+  category: "Category",
+  auth: "API Key",   // or "No", "OAuth", etc.
+  https: true,
+  cors: "Yes",       // or "No", "Unknown"
+  link: "https://your-api-docs-url.com"
+}
+```
 
-### 🎓 Students
-
-* Learn about different APIs
-* Explore tools used in real projects
-* Build API-based applications
-
-### 🚀 Startup Builders
-
-* Quickly find APIs for MVP development
-* Reduce backend development time
+That's it — the card will appear automatically.
 
 ---
 
-# 🔑 Key Advantages
+## ⚠️ Dependency Note
 
-| Feature               | API Verse |
-| --------------------- | --------- |
-| Easy API discovery    | ✅         |
-| Developer friendly UI | ✅         |
-| Fast performance      | ✅         |
-| Open source           | ✅         |
-| Free to use           | ✅         |
+`react-icons` is listed in `package.json` but is **not used anywhere** in the codebase. You can safely remove it to keep things clean:
+
+```bash
+npm uninstall react-icons
+```
 
 ---
 
-# 🤝 Contributing
+## 🗺️ Roadmap
 
-Contributions are welcome!
+- [ ] Category filter buttons
+- [ ] API rating / popularity system
+- [ ] Dark / light theme toggle
+- [ ] API submission form for community contributions
+- [ ] Dynamic backend / database instead of static data
+- [ ] Pagination or infinite scroll for large API lists
 
-### Steps to Contribute
+---
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a new branch
-
-```bash
-git checkout -b feature/new-feature
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Added new feature"
-```
-
-4. Push to the branch
-
-```bash
-git push origin feature/new-feature
-```
-
+2. Create a feature branch — `git checkout -b feature/your-feature`
+3. Commit your changes — `git commit -m "Add your feature"`
+4. Push to the branch — `git push origin feature/your-feature`
 5. Open a Pull Request
 
 ---
 
-# 📝 Roadmap
+## 📄 License
 
-Future improvements planned for **API Verse**:
-
-* [ ] Add API search filters
-* [ ] Add API categories page
-* [ ] Add API rating system
-* [ ] Add API popularity ranking
-* [ ] Add dark/light theme toggle
-* [ ] Add API submission form
-* [ ] Convert API list to dynamic database
-
----
-
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
-See the [LICENSE](LICENSE) file for details.
-
----
-
-# 👨‍💻 Author: **Kanav Chauhan**
-
-GitHub: [GitHub](https://github.com/KanavChauhan23)
-
-Portfolio: [Portfolio](https://kanav-public.netlify.app/)
-
----
-
-# 📊 Project Stats
-
-![GitHub Stars](https://img.shields.io/github/stars/KanavChauhan23/API-Verse?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/KanavChauhan23/API-Verse?style=social)
-![GitHub Issues](https://img.shields.io/github/issues/KanavChauhan23/API-Verse)
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by Kanav Chauhan**
+**Made with ❤️ by [Kanav Chauhan](https://kanav-public.netlify.app/)**
 
-⭐ If you like this project, please give it a star on GitHub!
+⭐ If you found this useful, give it a star on GitHub!
 
 </div>
